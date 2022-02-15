@@ -1,0 +1,24 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "include": ["src", "types", ".snowpack/types/*"],
+  "exclude": ["node_modules/*"],
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "importsNotUsedAsValues": "error",
+    "jsx": "preserve",
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "paths": {
+      "*": [".snowpack/types/*"]
+    },
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2020",
+    "types": ["mocha", "snowpack-env", "svelte"],
+    "useDefineForClassFields": true
+  }
+}

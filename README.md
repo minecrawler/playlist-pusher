@@ -2,6 +2,8 @@
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
+https://github.com/withastro/snowpack/tree/main/create-snowpack-app/app-template-svelte-typescript
+
 ## Available Scripts
 
 ### npm start
