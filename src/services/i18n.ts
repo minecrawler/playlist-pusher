@@ -6,13 +6,12 @@ export async function downloadTranslations() {
     cache = await response.json();
 }
 
-export function translate(key: string): string {
-    const args = Array.from(arguments);
+export function translate(key: string, ...formatValues: string[]): string {
     let translation = cache[key] ?? key;
 
     {
-        let i = 1;
-        translation = translation.replace(/{}/g, () => args[i++]);
+        let i = 0;
+        translation = translation.replace(/{}/g, () => formatValues[i++]);
     }
 
     translation = translation.replace(/&nbsp;/ig, '\u00A0');
