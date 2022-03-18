@@ -20,12 +20,13 @@ export const formats: Record<string, TParser> = {
             reader.addEventListener('load', event => {
                 const content = event.target!.result! as string;
                 const lines = content.split(/\r?\n/);
-                const headerFields = lines.shift()?.split('\t');
-                const trackInfos: ITrackInfo[] = [];
+                const headerFields = lines.shift()?.split(fieldSeparator!);
 
                 if (!headerFields) {
                     throw EFormatError;
                 }
+
+                const trackInfos: ITrackInfo[] = [];
 
                 {
                     const artistColIndex = headerFields.indexOf(artistFieldId);
@@ -33,13 +34,11 @@ export const formats: Record<string, TParser> = {
                     const trackNameColIndex = headerFields.indexOf(trackNameFieldId);
                     let lineTokens;
 
-                    console.log(headerFields, artistColIndex, trackNameColIndex)
-
                     if (artistColIndex < 0 || trackNameColIndex < 0) {
                         throw EMissingField;
                     }
 
-                    for (const [index, line] of lines.entries()) {
+                    for (const line of lines) {
                         // skip empty lines
                         if (!line.trim()) {
                             continue;
