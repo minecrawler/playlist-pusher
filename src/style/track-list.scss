@@ -1,0 +1,38 @@
+@use "./colors";
+
+td:nth-child(2) {
+  border-right: 1px solid colors.$secondary-font-color;
+}
+
+th {
+  font-weight: bold;
+  border-bottom: 2px solid colors.$highlight-color;
+}
+
+td, th {
+  box-sizing: border-box;
+  padding: .5rem 1rem;
+}
+
+td {
+  &:first-child {
+    vertical-align: middle;
+  }
+
+  &.-error {
+    background-color: colors.$error-color;
+  }
+
+  &.-warning {
+    background-color: colors.$warning-color;
+  }
+}
+
+tr {
+  border-bottom: 1px solid colors.$secondary-font-color;
+  box-sizing: border-box;
+}
+
+.-icon {
+  cursor: default;
+}

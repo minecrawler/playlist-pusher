@@ -1,14 +1,12 @@
 <script lang="ts">
-    import {name} from '../../config';
-    import {t} from '../../services/i18n';
-    import Button from "../button/Button.svelte";
-    import {login} from "../../services/spotify";
-
-
+    import {name} from '../config';
+    import {t} from '../services/i18n';
+    import Button from "./Button.svelte";
+    import {login} from "../services/spotify";
 </script>
 
 <style lang="scss">
-  @use "../../style/colors";
+  @use "src/style/colors";
 
   .container {
     align-items: center;

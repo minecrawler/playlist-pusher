@@ -6,7 +6,7 @@
 </script>
 
 <style lang="scss">
-  @use "../../style/colors";
+  @use "src/style/colors";
 
   .button {
     background: none;
@@ -20,9 +20,17 @@
       padding: 1rem 2rem;
     }
 
+    &:hover {
+      border-color: colors.$highlight-color-2;
+    }
+
     &.primary {
       background-color: colors.$highlight-color;
-      color: colors.$background;
+      color: colors.$background-color;
+
+      &:hover {
+        background-color: colors.$highlight-color-2;
+      }
     }
   }
 </style>

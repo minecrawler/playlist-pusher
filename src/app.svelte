@@ -1,10 +1,10 @@
 <script lang="ts">
-    import Login from './components/login/Login.svelte';
+    import Login from './components/Login.svelte';
     import {onMount} from 'svelte';
     import {downloadTranslations} from "./services/i18n";
     import * as Spotify from "./services/spotify";
-    import MenuBar from "./components/menu-bar/MenuBar.svelte";
-    import Trackinfo from "./components/track-info/track-info.svelte";
+    import MenuBar from "./components/MenuBar.svelte";
+    import Trackinfo from "./components/track-info.svelte";
     import {name} from './config';
 
     let canRender = false;
@@ -27,8 +27,12 @@
 <style lang="scss">
   @use "style/colors";
 
+  :global(body, html) {
+    background-color: colors.$background-color;
+  }
+
   .app {
-    background-color: colors.$background;
+    background-color: colors.$background-color;
     color: colors.$primary-font-color;
     display: flex;
     height: 100%;

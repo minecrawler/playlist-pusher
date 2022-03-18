@@ -1,12 +1,12 @@
 <script lang="ts">
-    import * as Spotify from '../../services/spotify';
-    import Button from "../button/Button.svelte";
-    import {t} from "../../services/i18n";
-    import {logout} from "../../services/spotify";
+    import * as Spotify from '../services/spotify';
+    import Button from "./Button.svelte";
+    import {t} from "../services/i18n";
+    import {logout} from "../services/spotify";
 </script>
 
 <style lang="scss">
-  @use "../../style/colors";
+  @use "src/style/colors";
 
   .header {
     align-self: flex-start;
@@ -19,6 +19,7 @@
     width: 100%;
 
     > .name {
+      font-weight: bold;
       margin-right: 1rem;
     }
   }

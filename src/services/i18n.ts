@@ -7,5 +7,15 @@ export async function downloadTranslations() {
 }
 
 export function translate(key: string): string {
-    return cache[key] ?? key;
+    const args = Array.from(arguments);
+    let translation = cache[key] ?? key;
+
+    {
+        let i = 1;
+        translation = translation.replace(/{}/g, () => args[i++]);
+    }
+
+    translation = translation.replace(/&nbsp;/ig, '\u00A0');
+
+    return translation;
 } export const t = translate;

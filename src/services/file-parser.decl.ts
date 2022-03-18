@@ -12,6 +12,7 @@ export interface IParserOptions {
 export interface ITrackInfo {
     artist: string
     name: string
+    row: number
 }
 
 export type TParser = (options: IParserOptions) => Promise<ITrackInfo[]>;

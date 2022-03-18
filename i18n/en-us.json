@@ -1,7 +1,13 @@
 {
+  "error_row_missing": "Error: Row {} could not be parsed correctly!",
+  "error_track_not_found": "Error: Track not found!",
+  "hint_no_file_selected": "No file selected...",
+  "hint_select_file": "Please select a file...",
   "login": "Login",
   "logout": "Logout",
   "track_artist": "Artist",
   "track_name": "Track name",
-  "upload_label": "Upload list:"
+  "track_search_result": "Result",
+  "upload_label": "Upload list:",
+  "warning_field_missing": "Missing: {}:{}&nbsp;!"
 }

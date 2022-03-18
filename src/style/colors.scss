@@ -1,4 +1,10 @@
-$background: rgb(24, 24, 24);
+$background-color: rgb(24, 24, 24);
 $primary-font-color: rgb(243, 243, 243);
 $secondary-font-color: rgb(161, 161, 161);
-$highlight-color: rgb(85, 183, 89);
+$highlight-color: hsl(122, 40.5%, 52.5%);
+$highlight-color-2: hsl(122, 56.8%, 61%);
+
+$contrast-primary-font-color: black;
+$contrast-secondary-font-color: hsl(0, 0%, 35%);
+$error-color: hsl(0, 40.5%, 52.5%);
+$warning-color: hsl(50, 40.5%, 52.5%);
